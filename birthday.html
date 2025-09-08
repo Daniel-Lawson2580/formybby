@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday ❤️</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Card styling */
+        .card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+            overflow: hidden;
+        }
+
+        /* Blurred background image inside the card */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('khali.jpg');
+            /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            filter: blur;
+            z-index: -1;
+        }
+
+        /* Love bubbles (heart-shaped) */
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -50px;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 105, 180, 0.7);
+            /* Light pink */
+            transform: rotate(45deg);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .bubble::before,
+        .bubble::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 105, 180, 0.7);
+            /* Light pink */
+            border-radius: 50%;
+        }
+
+        .bubble::before {
+            top: -15px;
+            left: 0;
+        }
+
+        .bubble::after {
+            left: -15px;
+            top: 0;
+        }
+
+        .bubble:nth-child(1) {
+            left: 10%;
+            animation-duration: 4s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            left: 30%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 50%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 70%;
+            animation-duration: 7s;
+            animation-delay: 3s;
+        }
+
+        .bubble:nth-child(5) {
+            left: 90%;
+            animation-duration: 8s;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg) scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-200px) rotate(45deg) scale(1.2);
+                opacity: 0.9;
+            }
+
+            100% {
+                transform: translateY(-400px) rotate(45deg) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        /* Heading styling */
+        .card h1 {
+            font-size: 2.5rem;
+            color: #e91e63;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraph styling */
+        .card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Signature styling */
+        .signature {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .signature p {
+            margin: 5px 0;
+            font-style: italic;
+            color: #777;
+        }
+
+        .signature .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #673ab7;
+        }
+
+        /* Lottie animation styling */
+        .lottie {
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+
+        <lottie-player class="lottie" src="https://assets3.lottiefiles.com/packages/lf20_touohxv0.json"
+            background="transparent" speed="1" loop autoplay></lottie-player>
+
+        <h1>Happy Birthday, My Love 🎉</h1>
+        <p>
+            Today we celebrate <span style="font-weight: bold; color: #e91e63;">YOU</span> — the most wonderful person
+            in my life.
+            May your day be filled with joy, laughter, and endless love ❤️.
+        </p>
+
+        <div class="signature">
+            <p>Forever yours,</p>
+            <p class="name">[You Know Who..]</p>
+        </div>
+    </div>
+</body>
+
+</html>

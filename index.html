@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .heart-button {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(45deg);
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 70px;
+            text-decoration: none;
+        }
+
+        .heart-button::before,
+        .heart-button::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart-button::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart-button::after {
+            top: 0;
+            left: -50px;
+        }
+
+        .heart-button:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="birthday.html" class="heart-button">
+        <span style="transform: rotate(-45deg); display: inline-block;">Click Me</span>
+    </a>
+</body>
+
+</html>
